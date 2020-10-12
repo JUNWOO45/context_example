@@ -1,9 +1,10 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import Toolbar from "./Toolbar";
 
 function App() {
-  return <div className="App"></div>;
+  return <Toolbar />;
 }
 
 export default App;
