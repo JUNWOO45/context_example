@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import LangContext from "./LangContext";
 import Button from "./Button";
 import Title from "./Title";
 import Message from "./Message";
@@ -11,11 +12,11 @@ function App() {
   };
 
   return (
-    <>
-      <Button lang={lang} toggleLang={toggleLang} />
-      <Title lang={lang} />
-      <Message lang={lang} />
-    </>
+    <LangContext.Provider value={lang}>
+      <Button toggleLang={toggleLang} />
+      <Title />
+      <Message />
+    </LangContext.Provider>
   );
 }
 

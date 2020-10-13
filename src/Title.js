@@ -1,11 +1,15 @@
 import React from "react";
+import LangContext from "./LangContext";
 
-const Title = ({ lang }) => {
-  const text = lang === "en" ? "TITLE~!" : "타이틀~!";
+const Title = () => {
   return (
-    <>
-      <h1>{text}</h1>
-    </>
+    <LangContext.Consumer>
+      {(lang) => {
+        const text = lang === "en" ? "TITLE~!" : "타이틀~!";
+
+        return <h1>{text}</h1>;
+      }}
+    </LangContext.Consumer>
   );
 };
 

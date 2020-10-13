@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import LangContext from "./LangContext";
 
-const Button = ({ lang, toggleLang }) => {
+const Button = ({ toggleLang }) => {
+  const lang = useContext(LangContext);
+
   return (
     <>
       <button onClick={toggleLang}>{lang}</button>
